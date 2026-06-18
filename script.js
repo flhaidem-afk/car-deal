@@ -168,14 +168,10 @@ class CareRepo {
         });
     }
 
-    toggleView() {
-        const grid = document.getElementById('carsGrid');
-        if (this.currentView === 'list') {
-            grid.style.gridTemplateColumns = '1fr';
-        } else {
-            grid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(300px, 1fr))';
-        }
-    }
+toggleView() {
+    const grid = document.getElementById('carsGrid');
+    grid.classList.toggle('list-view', this.currentView === 'list');
+}
 
     sortCars(criteria) {
         const sorted = [...this.cars];
