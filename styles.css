@@ -1037,7 +1037,8 @@ body {
     .cta-section,
     .footer {
   
-        padding-left: 1%;
+        padding-left:1px;
+        
       
     
     }
