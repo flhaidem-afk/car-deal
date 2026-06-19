@@ -251,3 +251,5 @@ function searchCars() {
 document.addEventListener('DOMContentLoaded', () => {
     window.careRepo = new CareRepo();
 });
+
+document.documentElement.scrollWidth - window.innerWidth
