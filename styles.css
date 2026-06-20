@@ -21,8 +21,8 @@ body {
     --primary-light: #60A5FA;
     --secondary: #60A5FA;
     --accent: #818CF8;
-    --bg: #0A0A0F;
-    --bg-light: #111118;
+    --bg: #ffffff;
+    --bg-light: #ffffff;
     --bg-card: rgba(255, 255, 255, 0.03);
     --bg-card-hover: rgba(255, 255, 255, 0.06);
     --glass: rgba(255, 255, 255, 0.05);
@@ -33,9 +33,9 @@ body {
     --text-muted: #64748B;
     --border: rgba(255, 255, 255, 0.06);
     --gradient-primary: linear-gradient(135deg, #3B82F6 0%, #60A5FA 50%, #818CF8 100%);
-    --gradient-dark: linear-gradient(135deg, #0A0A0F 0%, #111118 100%);
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --gradient-dark: linear-gradient(135deg, #333346 0%, #18181f 100%);
+    --shadow-sm: 0 2px 8px rgba(34, 34, 34, 0.3);
+    --shadow-md: 0 4px 20px rgba(95, 95, 95, 0.4);
     --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
     --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.15);
     --transition-fast: 0.2s ease;
