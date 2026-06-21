@@ -3,702 +3,553 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CarRepo - Premium platform for buying and selling quality used cars. Browse verified sellers, best prices, and secure transactions.">
-    <meta name="keywords" content="used cars, buy cars, sell cars, car marketplace, pre-owned vehicles, car dealers">
-    <meta name="author" content="CarRepo">
-    <meta name="theme-color" content="#3B82F6">
-    <title>CarRepo - Find Your Perfect Used Car</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="AutoVault - Premium Car Marketplace. Find your dream car from thousands of verified listings. New and used cars, trucks, SUVs, and luxury vehicles.">
+    <meta name="keywords" content="car marketplace, buy cars, sell cars, used cars, new cars, auto dealer, car search, vehicle listings">
+    <title>AutoVault | Premium Car Marketplace</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 <base target="_blank">
 </head>
 <body>
     <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="loader">
-            <div class="loader-car">
-                <i class="fas fa-car-side"></i>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-car"></i>
             </div>
-            <div class="loader-text">CarRepo</div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
+            <h2>AutoVault</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
             </div>
         </div>
     </div>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- ==================== NAVIGATION ==================== -->
+    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <!-- Logo -->
-            <a href="#" class="nav-logo">
+            <a href="#home" class="logo">
                 <i class="fas fa-car"></i>
-                <span>CarRepo</span>
+                <span>AutoVault</span>
             </a>
-
-            <!-- Desktop Navigation -->
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#featured" class="nav-link">Browse Cars</a></li>
-                <li><a href="#categories" class="nav-link">Categories</a></li>
-                <li><a href="#why-choose" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-
-            <!-- Auth Buttons -->
-             </div>
-                <a href="#" class="btn btn-outline">Login</a>
-                <a href="#" class="btn btn-primary">Sign Up</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#featured" class="nav-link">Inventory</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#financing" class="nav-link">Financing</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
-
-            <!-- Mobile Hamburger -->
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#featured" class="btn btn-primary nav-cta">
+                    <i class="fas fa-search"></i>
+                    Find a Car
+                </a>
+            </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobile-menu">
-            <ul class="mobile-nav-menu">
-                <li><a href="#home" class="mobile-nav-link">Home</a></li>
-                <li><a href="#featured" class="mobile-nav-link">Browse Cars</a></li>
-                <li><a href="#categories" class="mobile-nav-link">Categories</a></li>
-                <li><a href="#why-choose" class="mobile-nav-link">About</a></li>
-                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-            </ul>
-            <div class="mobile-nav-auth">
-                <a href="#" class="btn btn-outline btn-full">Login</a>
-                <a href="#" class="btn btn-primary btn-full">Sign Up</a>
-            </div>
         </div>
     </nav>
 
-    <!-- ==================== HERO SECTION ==================== -->
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#featured" class="mobile-link">Inventory</a>
+            <a href="#categories" class="mobile-link">Categories</a>
+            <a href="#financing" class="mobile-link">Financing</a>
+            <a href="#testimonials" class="mobile-link">Reviews</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <a href="#featured" class="btn btn-primary mobile-cta">Find a Car</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
     <section class="hero" id="home">
-        <!-- Background decorative elements -->
-        <div class="hero-bg-gradient"></div>
-        <div class="hero-glow hero-glow-1"></div>
-        <div class="hero-glow hero-glow-2"></div>
-        <div class="hero-grid"></div>
-
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge reveal">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Verified & Trusted Marketplace</span>
-                </div>
-
-                <h1 class="hero-title reveal">
-                    Find Your Perfect <span class="gradient-text">Used Car</span> Today
-                </h1>
-
-                <p class="hero-subtitle reveal">
-                    Browse thousands of verified listings from trusted dealers and private sellers. 
-                    Every car inspected, every deal secured.
-                </p>
-
-                <!-- Search Bar -->
-                <div class="search-bar reveal">
-                    <div class="search-input-wrapper">
-                        <i class="fas fa-search search-icon"></i>
-                        <input type="text" class="search-input" placeholder="Search by make, model, or keyword..." id="car-search">
-                    </div>
-                    <div class="search-filters">
-                        <select class="filter-select" id="filter-brand">
-                            <option value="">All Brands</option>
-                            <option value="toyota">Toyota</option>
-                            <option value="honda">Honda</option>
-                            <option value="bmw">BMW</option>
-                            <option value="mercedes">Mercedes</option>
-                            <option value="audi">Audi</option>
-                            <option value="tesla">Tesla</option>
-                        </select>
-                        <select class="filter-select" id="filter-price">
-                            <option value="">Price Range</option>
-                            <option value="0-10000">Under $10,000</option>
-                            <option value="10000-20000">$10,000 - $20,000</option>
-                            <option value="20000-30000">$20,000 - $30,000</option>
-                            <option value="30000-50000">$30,000 - $50,000</option>
-                            <option value="50000+">$50,000+</option>
-                        </select>
-                    </div>
-                    <button class="btn btn-primary btn-search" id="search-btn">
-                        <i class="fas fa-search"></i>
-                        <span>Search</span>
-                    </button>
-                </div>
-
-                <!-- CTA Buttons -->
-                <div class="hero-cta reveal">
-                    <a href="#featured" class="btn btn-primary btn-lg">
-                        <i class="fas fa-car"></i>
-                        Browse Cars
-                    </a>
-                    <a href="#how-it-works" class="btn btn-glass btn-lg">
-                        <i class="fas fa-play-circle"></i>
-                        How It Works
-                    </a>
-                </div>
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge reveal-up">
+                <i class="fas fa-shield-check"></i>
+                <span>Trusted by 50,000+ Buyers</span>
+            </div>
+            <h1 class="hero-title reveal-up">
+                Find Your<br>
+                <span class="accent-text">Perfect Ride</span>
+            </h1>
+            <p class="hero-subtitle reveal-up">
+                Browse thousands of verified vehicles from trusted dealers. 
+                From daily drivers to luxury dream cars, your next vehicle is waiting.
+            </p>
+            <div class="hero-buttons reveal-up">
+                <a href="#featured" class="btn btn-primary btn-lg">
+                    <i class="fas fa-search"></i>
+                    Search Cars
+                </a>
+                <a href="#featured" class="btn btn-outline btn-lg">
+                    <i class="fas fa-list"></i>
+                    Browse Inventory
+                </a>
             </div>
 
-            <!-- Hero Image -->
-            <div class="hero-image-wrapper reveal">
-                <div class="hero-image-glow"></div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=800&h=500&fit=crop" alt="Premium used car showcase" loading="eager">
-                    <!-- Floating stats card -->
-                    <div class="hero-float-card float-card-1">
-                        <div class="float-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <div class="float-info">
-                            <span class="float-label">Verified</span>
-                            <span class="float-value">100%</span>
-                        </div>
+            <!-- Quick Search Form -->
+            <div class="quick-search reveal-up">
+                <div class="search-form" id="quickSearchForm">
+                    <div class="search-field">
+                        <label><i class="fas fa-car"></i> Brand</label>
+                        <select id="heroBrand">
+                            <option value="">All Brands</option>
+                            <option value="bmw">BMW</option>
+                            <option value="mercedes">Mercedes-Benz</option>
+                            <option value="audi">Audi</option>
+                            <option value="porsche">Porsche</option>
+                            <option value="tesla">Tesla</option>
+                            <option value="lexus">Lexus</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="honda">Honda</option>
+                            <option value="ford">Ford</option>
+                            <option value="chevrolet">Chevrolet</option>
+                        </select>
                     </div>
-                    <div class="hero-float-card float-card-2">
-                        <div class="float-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="float-info">
-                            <span class="float-label">Rating</span>
-                            <span class="float-value">4.9/5</span>
-                        </div>
+                    <div class="search-field">
+                        <label><i class="fas fa-tag"></i> Max Price</label>
+                        <select id="heroPrice">
+                            <option value="">Any Price</option>
+                            <option value="25000">Under $25,000</option>
+                            <option value="50000">Under $50,000</option>
+                            <option value="75000">Under $75,000</option>
+                            <option value="100000">Under $100,000</option>
+                            <option value="150000">Under $150,000</option>
+                        </select>
                     </div>
+                    <div class="search-field">
+                        <label><i class="fas fa-gas-pump"></i> Fuel Type</label>
+                        <select id="heroFuel">
+                            <option value="">Any Type</option>
+                            <option value="gasoline">Gasoline</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="electric">Electric</option>
+                            <option value="hybrid">Hybrid</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary search-btn" id="heroSearchBtn">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Statistics Bar -->
-        <div class="stats-bar">
-            <div class="stats-container">
-                <div class="stat-item reveal">
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card reveal-up">
                     <div class="stat-icon">
                         <i class="fas fa-car"></i>
                     </div>
                     <div class="stat-content">
-                        <span class="stat-number" data-target="500">0</span>
-                        <span class="stat-suffix">+</span>
+                        <span class="stat-number" data-count="12450">0</span>
                         <span class="stat-label">Cars Available</span>
                     </div>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item reveal">
+                <div class="stat-card reveal-up">
                     <div class="stat-icon">
-                        <i class="fas fa-store"></i>
+                        <i class="fas fa-users"></i>
                     </div>
                     <div class="stat-content">
-                        <span class="stat-number" data-target="200">0</span>
-                        <span class="stat-suffix">+</span>
-                        <span class="stat-label">Trusted Dealers</span>
-                    </div>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item reveal">
-                    <div class="stat-icon">
-                        <i class="fas fa-smile"></i>
-                    </div>
-                    <div class="stat-content">
-                        <span class="stat-number" data-target="1000">0</span>
-                        <span class="stat-suffix">+</span>
+                        <span class="stat-number" data-count="52800">0</span>
                         <span class="stat-label">Happy Customers</span>
                     </div>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item reveal">
+                <div class="stat-card reveal-up">
                     <div class="stat-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="stat-content">
-                        <span class="stat-number" data-target="99">0</span>
-                        <span class="stat-suffix">%</span>
-                        <span class="stat-label">Satisfaction Rate</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== FEATURED CARS ==================== -->
-    <section class="featured" id="featured">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <span class="section-tag">Featured Listings</span>
-                <h2 class="section-title">Popular <span class="gradient-text">Used Cars</span></h2>
-                <p class="section-subtitle">Handpicked quality vehicles from our verified dealers</p>
-            </div>
-
-            <!-- Filter Tabs -->
-            <div class="filter-tabs reveal">
-                <button class="filter-tab active" data-filter="all">All Cars</button>
-                <button class="filter-tab" data-filter="suv">SUVs</button>
-                <button class="filter-tab" data-filter="sedan">Sedans</button>
-                <button class="filter-tab" data-filter="luxury">Luxury</button>
-                <button class="filter-tab" data-filter="electric">Electric</button>
-                <button class="filter-tab" data-filter="sports">Sports</button>
-            </div>
-
-            <!-- Car Grid -->
-            <div class="car-grid" id="car-grid">
-                <!-- Car Card 1 -->
-                <div class="car-card reveal" data-category="suv">
-                    <div class="car-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&h=400&fit=crop" alt="Toyota RAV4" loading="lazy">
-                        <div class="car-badge">Featured</div>
-                        <div class="car-wishlist">
-                            <i class="far fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="car-content">
-                        <div class="car-header">
-                            <h3 class="car-name">Toyota RAV4</h3>
-                            <span class="car-year">2021</span>
-                        </div>
-                        <div class="car-specs">
-                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 24,500 mi</span>
-                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Gasoline</span>
-                            <span class="spec-item"><i class="fas fa-cog"></i> Automatic</span>
-                        </div>
-                        <div class="car-footer">
-                            <div class="car-price">
-                                <span class="price-label">Price</span>
-                                <span class="price-value">$28,500</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Car Card 2 -->
-                <div class="car-card reveal" data-category="sedan">
-                    <div class="car-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&h=400&fit=crop" alt="BMW 3 Series" loading="lazy">
-                        <div class="car-badge">Hot Deal</div>
-                        <div class="car-wishlist">
-                            <i class="far fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="car-content">
-                        <div class="car-header">
-                            <h3 class="car-name">BMW 3 Series</h3>
-                            <span class="car-year">2020</span>
-                        </div>
-                        <div class="car-specs">
-                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 18,200 mi</span>
-                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Gasoline</span>
-                            <span class="spec-item"><i class="fas fa-cog"></i> Automatic</span>
-                        </div>
-                        <div class="car-footer">
-                            <div class="car-price">
-                                <span class="price-label">Price</span>
-                                <span class="price-value">$32,900</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Car Card 3 -->
-                <div class="car-card reveal" data-category="luxury">
-                    <div class="car-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4f8?w=600&h=400&fit=crop" alt="Mercedes-Benz E-Class" loading="lazy">
-                        <div class="car-wishlist">
-                            <i class="far fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="car-content">
-                        <div class="car-header">
-                            <h3 class="car-name">Mercedes-Benz E-Class</h3>
-                            <span class="car-year">2022</span>
-                        </div>
-                        <div class="car-specs">
-                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 12,800 mi</span>
-                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Hybrid</span>
-                            <span class="spec-item"><i class="fas fa-cog"></i> Automatic</span>
-                        </div>
-                        <div class="car-footer">
-                            <div class="car-price">
-                                <span class="price-label">Price</span>
-                                <span class="price-value">$45,000</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Car Card 4 -->
-                <div class="car-card reveal" data-category="electric">
-                    <div class="car-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600&h=400&fit=crop" alt="Tesla Model 3" loading="lazy">
-                        <div class="car-badge">Eco Friendly</div>
-                        <div class="car-wishlist">
-                            <i class="far fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="car-content">
-                        <div class="car-header">
-                            <h3 class="car-name">Tesla Model 3</h3>
-                            <span class="car-year">2023</span>
-                        </div>
-                        <div class="car-specs">
-                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 8,500 mi</span>
-                            <span class="spec-item"><i class="fas fa-bolt"></i> Electric</span>
-                            <span class="spec-item"><i class="fas fa-cog"></i> Automatic</span>
-                        </div>
-                        <div class="car-footer">
-                            <div class="car-price">
-                                <span class="price-label">Price</span>
-                                <span class="price-value">$38,700</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Car Card 5 -->
-                <div class="car-card reveal" data-category="sports">
-                    <div class="car-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=600&h=400&fit=crop" alt="Porsche 911" loading="lazy">
-                        <div class="car-wishlist">
-                            <i class="far fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="car-content">
-                        <div class="car-header">
-                            <h3 class="car-name">Porsche 911</h3>
-                            <span class="car-year">2019</span>
-                        </div>
-                        <div class="car-specs">
-                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 15,300 mi</span>
-                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Gasoline</span>
-                            <span class="spec-item"><i class="fas fa-cog"></i> PDK</span>
-                        </div>
-                        <div class="car-footer">
-                            <div class="car-price">
-                                <span class="price-label">Price</span>
-                                <span class="price-value">$89,500</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Car Card 6 -->
-                <div class="car-card reveal" data-category="suv">
-                    <div class="car-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&h=400&fit=crop" alt="Audi Q5" loading="lazy">
-                        <div class="car-badge">Best Value</div>
-                        <div class="car-wishlist">
-                            <i class="far fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="car-content">
-                        <div class="car-header">
-                            <h3 class="car-name">Audi Q5</h3>
-                            <span class="car-year">2021</span>
-                        </div>
-                        <div class="car-specs">
-                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 22,100 mi</span>
-                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Gasoline</span>
-                            <span class="spec-item"><i class="fas fa-cog"></i> Automatic</span>
-                        </div>
-                        <div class="car-footer">
-                            <div class="car-price">
-                                <span class="price-label">Price</span>
-                                <span class="price-value">$35,200</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Car Card 7 -->
-                <div class="car-card reveal" data-category="sedan">
-                    <div class="car-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&h=400&fit=crop" alt="Honda Accord" loading="lazy">
-                        <div class="car-wishlist">
-                            <i class="far fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="car-content">
-                        <div class="car-header">
-                            <h3 class="car-name">Honda Accord</h3>
-                            <span class="car-year">2022</span>
-                        </div>
-                        <div class="car-specs">
-                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 16,400 mi</span>
-                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Hybrid</span>
-                            <span class="spec-item"><i class="fas fa-cog"></i> CVT</span>
-                        </div>
-                        <div class="car-footer">
-                            <div class="car-price">
-                                <span class="price-label">Price</span>
-                                <span class="price-value">$26,800</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Car Card 8 -->
-                <div class="car-card reveal" data-category="luxury">
-                    <div class="car-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=600&h=400&fit=crop" alt="Audi A6" loading="lazy">
-                        <div class="car-wishlist">
-                            <i class="far fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="car-content">
-                        <div class="car-header">
-                            <h3 class="car-name">Audi A6</h3>
-                            <span class="car-year">2021</span>
-                        </div>
-                        <div class="car-specs">
-                            <span class="spec-item"><i class="fas fa-tachometer-alt"></i> 19,700 mi</span>
-                            <span class="spec-item"><i class="fas fa-gas-pump"></i> Gasoline</span>
-                            <span class="spec-item"><i class="fas fa-cog"></i> Automatic</span>
-                        </div>
-                        <div class="car-footer">
-                            <div class="car-price">
-                                <span class="price-label">Price</span>
-                                <span class="price-value">$41,300</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">View Details</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section-cta reveal">
-                <a href="#" class="btn btn-outline btn-lg">View All Cars <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== CAR CATEGORIES ==================== -->
-    <section class="categories" id="categories">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <span class="section-tag">Browse by Type</span>
-                <h2 class="section-title">Car <span class="gradient-text">Categories</span></h2>
-                <p class="section-subtitle">Find the perfect vehicle type for your lifestyle</p>
-            </div>
-
-            <div class="categories-grid">
-                <div class="category-card reveal">
-                    <div class="category-icon">
-                        <i class="fas fa-truck-pickup"></i>
-                    </div>
-                    <h3 class="category-name">SUVs</h3>
-                    <p class="category-count">124 cars</p>
-                    <div class="category-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-
-                <div class="category-card reveal">
-                    <div class="category-icon">
-                        <i class="fas fa-car-side"></i>
-                    </div>
-                    <h3 class="category-name">Sedans</h3>
-                    <p class="category-count">98 cars</p>
-                    <div class="category-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-
-                <div class="category-card reveal">
-                    <div class="category-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h3 class="category-name">Hatchbacks</h3>
-                    <p class="category-count">67 cars</p>
-                    <div class="category-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-
-                <div class="category-card reveal">
-                    <div class="category-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <h3 class="category-name">Luxury Cars</h3>
-                    <p class="category-count">45 cars</p>
-                    <div class="category-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-
-                <div class="category-card reveal">
-                    <div class="category-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="category-name">Electric Vehicles</h3>
-                    <p class="category-count">38 cars</p>
-                    <div class="category-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-
-                <div class="category-card reveal">
-                    <div class="category-icon">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <h3 class="category-name">Sports Cars</h3>
-                    <p class="category-count">28 cars</p>
-                    <div class="category-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== WHY CHOOSE CARREPO ==================== -->
-    <section class="why-choose" id="why-choose">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <span class="section-tag">Our Advantages</span>
-                <h2 class="section-title">Why Choose <span class="gradient-text">CarRepo</span></h2>
-                <p class="section-subtitle">We make buying and selling used cars simple, safe, and satisfying</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card reveal">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-check"></i>
-                    </div>
-                    <h3 class="feature-title">Verified Sellers</h3>
-                    <p class="feature-desc">Every seller on our platform is thoroughly vetted and verified to ensure trust and transparency.</p>
-                </div>
-
-                <div class="feature-card reveal">
-                    <div class="feature-icon">
-                        <i class="fas fa-tags"></i>
-                    </div>
-                    <h3 class="feature-title">Best Prices</h3>
-                    <p class="feature-desc">Compare prices across multiple dealers and get the best deal on your dream car.</p>
-                </div>
-
-                <div class="feature-card reveal">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3 class="feature-title">Secure Transactions</h3>
-                    <p class="feature-desc">Our escrow service protects both buyers and sellers throughout the entire transaction.</p>
-                </div>
-
-                <div class="feature-card reveal">
-                    <div class="feature-icon">
-                        <i class="fas fa-shipping-fast"></i>
-                    </div>
-                    <h3 class="feature-title">Nationwide Delivery</h3>
-                    <p class="feature-desc">Get your car delivered to your doorstep anywhere in the country with full insurance.</p>
-                </div>
-
-                <div class="feature-card reveal">
-                    <div class="feature-icon">
-                        <i class="fas fa-percentage"></i>
-                    </div>
-                    <h3 class="feature-title">Financing Available</h3>
-                    <p class="feature-desc">Flexible financing options with competitive rates from our trusted banking partners.</p>
-                </div>
-
-                <div class="feature-card reveal">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3 class="feature-title">24/7 Support</h3>
-                    <p class="feature-desc">Our dedicated support team is available around the clock to assist you with any questions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== HOW IT WORKS ==================== -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <span class="section-tag">Simple Process</span>
-                <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
-                <p class="section-subtitle">Four easy steps to get your dream car</p>
-            </div>
-
-            <div class="steps-container">
-                <div class="step-card reveal">
-                    <div class="step-number">01</div>
-                    <div class="step-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3 class="step-title">Search Car</h3>
-                    <p class="step-desc">Browse our extensive collection of verified used cars using our advanced search and filter tools.</p>
-                </div>
-
-                <div class="step-connector">
-                    <div class="connector-line"></div>
-                    <div class="connector-dot"></div>
-                </div>
-
-                <div class="step-card reveal">
-                    <div class="step-number">02</div>
-                    <div class="step-icon">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <h3 class="step-title">Contact Seller</h3>
-                    <p class="step-desc">Reach out to the seller directly through our secure messaging system to ask questions.</p>
-                </div>
-
-                <div class="step-connector">
-                    <div class="connector-line"></div>
-                    <div class="connector-dot"></div>
-                </div>
-
-                <div class="step-card reveal">
-                    <div class="step-number">03</div>
-                    <div class="step-icon">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <h3 class="step-title">Inspect Vehicle</h3>
-                    <p class="step-desc">Schedule a test drive and professional inspection to ensure the car meets your expectations.</p>
-                </div>
-
-                <div class="step-connector">
-                    <div class="connector-line"></div>
-                    <div class="connector-dot"></div>
-                </div>
-
-                <div class="step-card reveal">
-                    <div class="step-number">04</div>
-                    <div class="step-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
-                    <h3 class="step-title">Complete Purchase</h3>
-                    <p class="step-desc">Finalize the deal with our secure payment system and enjoy your new car with full warranty.</p>
+                    <div class="stat-content">
+                        <span class="stat-number" data-count="320">0</span>
+                        <span class="stat-label">Trusted Dealers</span>
+                    </div>
+                </div>
+                <div class="stat-card reveal-up">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number" data-count="12">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== TESTIMONIALS ==================== -->
-    <section class="testimonials" id="testimonials">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <span class="section-tag">Customer Reviews</span>
-                <h2 class="section-title">What Our <span class="gradient-text">Customers</span> Say</h2>
-                <p class="section-subtitle">Real stories from real car buyers</p>
+    <!-- Featured Cars Section -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <div class="section-header center reveal-up">
+                <span class="section-label">Featured Inventory</span>
+                <h2 class="section-title">Premium <span class="accent-text">Vehicles</span></h2>
+                <p class="section-subtitle">Hand-picked selection of the finest cars on the market</p>
             </div>
 
+            <!-- Advanced Filters -->
+            <div class="filters-wrapper reveal-up">
+                <div class="filters-toggle" id="filtersToggle">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>Filters</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="filters-panel" id="filtersPanel">
+                    <div class="filters-grid">
+                        <div class="filter-group">
+                            <label>Brand</label>
+                            <select id="filterBrand">
+                                <option value="">All Brands</option>
+                                <option value="bmw">BMW</option>
+                                <option value="mercedes">Mercedes-Benz</option>
+                                <option value="audi">Audi</option>
+                                <option value="porsche">Porsche</option>
+                                <option value="tesla">Tesla</option>
+                                <option value="lexus">Lexus</option>
+                                <option value="toyota">Toyota</option>
+                                <option value="honda">Honda</option>
+                                <option value="ford">Ford</option>
+                                <option value="chevrolet">Chevrolet</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Vehicle Type</label>
+                            <select id="filterType">
+                                <option value="">All Types</option>
+                                <option value="sedan">Sedan</option>
+                                <option value="suv">SUV</option>
+                                <option value="luxury">Luxury</option>
+                                <option value="electric">Electric</option>
+                                <option value="sports">Sports</option>
+                                <option value="truck">Truck</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Price Range</label>
+                            <select id="filterPrice">
+                                <option value="">Any Price</option>
+                                <option value="0-25000">Under $25,000</option>
+                                <option value="25000-50000">$25,000 - $50,000</option>
+                                <option value="50000-75000">$50,000 - $75,000</option>
+                                <option value="75000-100000">$75,000 - $100,000</option>
+                                <option value="100000+">$100,000+</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Year</label>
+                            <select id="filterYear">
+                                <option value="">Any Year</option>
+                                <option value="2026">2026</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Fuel Type</label>
+                            <select id="filterFuel">
+                                <option value="">Any Fuel</option>
+                                <option value="gasoline">Gasoline</option>
+                                <option value="diesel">Diesel</option>
+                                <option value="electric">Electric</option>
+                                <option value="hybrid">Hybrid</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Transmission</label>
+                            <select id="filterTransmission">
+                                <option value="">Any</option>
+                                <option value="automatic">Automatic</option>
+                                <option value="manual">Manual</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filters-actions">
+                        <button class="btn btn-outline btn-sm" id="resetFilters">
+                            <i class="fas fa-undo"></i> Reset
+                        </button>
+                        <span class="results-count" id="resultsCount">Showing 12 vehicles</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cars Grid -->
+            <div class="cars-grid" id="carsGrid">
+                <!-- Cars will be rendered by JavaScript -->
+            </div>
+
+            <div class="load-more-wrapper reveal-up">
+                <button class="btn btn-outline btn-lg" id="loadMoreBtn">
+                    <i class="fas fa-spinner"></i>
+                    Load More Vehicles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header center reveal-up">
+                <span class="section-label">Browse by Type</span>
+                <h2 class="section-title">Vehicle <span class="accent-text">Categories</span></h2>
+                <p class="section-subtitle">Find the perfect vehicle type for your lifestyle</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card reveal-up" data-category="sedan">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400&h=300&fit=crop" alt="Sedans" loading="lazy">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-car-side"></i>
+                        <h3>Sedans</h3>
+                        <span class="category-count">2,340 listings</span>
+                    </div>
+                </div>
+                <div class="category-card reveal-up" data-category="suv">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400&h=300&fit=crop" alt="SUVs" loading="lazy">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-truck-pickup"></i>
+                        <h3>SUVs</h3>
+                        <span class="category-count">1,890 listings</span>
+                    </div>
+                </div>
+                <div class="category-card reveal-up" data-category="luxury">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?w=400&h=300&fit=crop" alt="Luxury Cars" loading="lazy">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-crown"></i>
+                        <h3>Luxury Cars</h3>
+                        <span class="category-count">856 listings</span>
+                    </div>
+                </div>
+                <div class="category-card reveal-up" data-category="electric">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=400&h=300&fit=crop" alt="Electric Vehicles" loading="lazy">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Electric Vehicles</h3>
+                        <span class="category-count">1,240 listings</span>
+                    </div>
+                </div>
+                <div class="category-card reveal-up" data-category="sports">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1544636331-e26889cd82e8?w=400&h=300&fit=crop" alt="Sports Cars" loading="lazy">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>Sports Cars</h3>
+                        <span class="category-count">432 listings</span>
+                    </div>
+                </div>
+                <div class="category-card reveal-up" data-category="truck">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1551844930-05d774fb0a6f?w=400&h=300&fit=crop" alt="Trucks" loading="lazy">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-truck"></i>
+                        <h3>Trucks</h3>
+                        <span class="category-count">1,580 listings</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="why-us-grid">
+                <div class="why-us-content reveal-left">
+                    <span class="section-label">Why AutoVault</span>
+                    <h2 class="section-title">The Smart Way to<br><span class="accent-text">Buy a Car</span></h2>
+                    <p class="why-us-desc">
+                        We have revolutionized the car buying experience with transparency, 
+                        trust, and technology. Every vehicle on our platform undergoes rigorous 
+                        inspection and comes with a detailed history report.
+                    </p>
+                    <div class="why-us-features">
+                        <div class="why-feature">
+                            <div class="why-icon">
+                                <i class="fas fa-shield-check"></i>
+                            </div>
+                            <div class="why-text">
+                                <h4>Trusted Dealers</h4>
+                                <p>All dealers are verified and rated by real customers</p>
+                            </div>
+                        </div>
+                        <div class="why-feature">
+                            <div class="why-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="why-text">
+                                <h4>Secure Transactions</h4>
+                                <p>Encrypted payments and buyer protection on every deal</p>
+                            </div>
+                        </div>
+                        <div class="why-feature">
+                            <div class="why-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <div class="why-text">
+                                <h4>Quality Inspections</h4>
+                                <p>150-point inspection on every vehicle listed</p>
+                            </div>
+                        </div>
+                        <div class="why-feature">
+                            <div class="why-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="why-text">
+                                <h4>24/7 Support</h4>
+                                <p>Our team is always here to help you find the perfect car</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-us-image reveal-right">
+                    <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&h=700&fit=crop" alt="Premium car showroom" loading="lazy">
+                    <div class="why-badge">
+                        <span class="badge-number">98%</span>
+                        <span class="badge-text">Customer<br>Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financing Section -->
+    <section class="financing" id="financing">
+        <div class="container">
+            <div class="section-header center reveal-up">
+                <span class="section-label">Financing</span>
+                <h2 class="section-title">Calculate Your<br><span class="accent-text">Monthly Payment</span></h2>
+                <p class="section-subtitle">Get pre-approved in minutes with competitive rates</p>
+            </div>
+            <div class="financing-grid">
+                <div class="calculator reveal-left">
+                    <h3>Payment Calculator</h3>
+                    <div class="calculator-form">
+                        <div class="calc-group">
+                            <label>Vehicle Price</label>
+                            <div class="calc-input">
+                                <span class="calc-prefix">$</span>
+                                <input type="number" id="calcPrice" value="45000" min="1000" max="500000">
+                            </div>
+                            <input type="range" id="calcPriceRange" min="5000" max="200000" value="45000" step="1000">
+                        </div>
+                        <div class="calc-group">
+                            <label>Down Payment</label>
+                            <div class="calc-input">
+                                <span class="calc-prefix">$</span>
+                                <input type="number" id="calcDown" value="9000" min="0" max="100000">
+                            </div>
+                            <input type="range" id="calcDownRange" min="0" max="50000" value="9000" step="500">
+                        </div>
+                        <div class="calc-row">
+                            <div class="calc-group">
+                                <label>Interest Rate (%)</label>
+                                <div class="calc-input">
+                                    <input type="number" id="calcRate" value="5.9" min="0" max="20" step="0.1">
+                                    <span class="calc-suffix">%</span>
+                                </div>
+                            </div>
+                            <div class="calc-group">
+                                <label>Loan Term</label>
+                                <div class="calc-input">
+                                    <input type="number" id="calcTerm" value="60" min="12" max="84" step="12">
+                                    <span class="calc-suffix">mo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-result reveal-right">
+                    <div class="result-card">
+                        <div class="result-header">
+                            <h4>Estimated Monthly Payment</h4>
+                        </div>
+                        <div class="result-amount" id="monthlyPayment">$712</div>
+                        <div class="result-details">
+                            <div class="result-item">
+                                <span>Loan Amount</span>
+                                <span id="loanAmount">$36,000</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Total Interest</span>
+                                <span id="totalInterest">$5,640</span>
+                            </div>
+                            <div class="result-item">
+                                <span>Total Cost</span>
+                                <span id="totalCost">$50,640</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-primary btn-block">
+                            <i class="fas fa-file-alt"></i>
+                            Get Pre-Approved
+                        </a>
+                    </div>
+                    <div class="financing-options">
+                        <div class="fin-option">
+                            <i class="fas fa-percentage"></i>
+                            <div>
+                                <h5>Low APR</h5>
+                                <p>Rates starting at 3.9%</p>
+                            </div>
+                        </div>
+                        <div class="fin-option">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h5>Flexible Terms</h5>
+                                <p>12 to 84 months</p>
+                            </div>
+                        </div>
+                        <div class="fin-option">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h5>Instant Approval</h5>
+                                <p>Decision in minutes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header center reveal-up">
+                <span class="section-label">Testimonials</span>
+                <h2 class="section-title">What Our <span class="accent-text">Customers Say</span></h2>
+                <p class="section-subtitle">Real stories from real car buyers</p>
+            </div>
             <div class="testimonials-grid">
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card reveal-up">
                     <div class="testimonial-stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -706,17 +557,20 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"CarRepo made buying my first car incredibly easy. The verified sellers gave me peace of mind, and I got an amazing deal on a 2021 Honda Civic. Highly recommend!"</p>
+                    <p class="testimonial-text">
+                        "Found my dream BMW M3 within a week. The search filters made it incredibly easy 
+                        to narrow down exactly what I wanted. The dealer was transparent and the whole 
+                        process was seamless."
+                    </p>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="James Wilson" class="author-avatar" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Alex Thompson" loading="lazy">
                         <div class="author-info">
-                            <span class="author-name">James Wilson</span>
-                            <span class="author-title">First-time Buyer</span>
+                            <h4>Alex Thompson</h4>
+                            <span>Purchased BMW M3</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card reveal-up">
                     <div class="testimonial-stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -724,17 +578,20 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"The financing options were fantastic. I was able to get a low-interest loan and drive home my dream BMW the same week. The customer service is top-notch!"</p>
+                    <p class="testimonial-text">
+                        "The financing calculator helped me understand exactly what I could afford. 
+                        Got pre-approved the same day and drove home in my new Tesla Model Y. 
+                        Exceptional service!"
+                    </p>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Sarah Mitchell" class="author-avatar" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Sarah Mitchell" loading="lazy">
                         <div class="author-info">
-                            <span class="author-name">Sarah Mitchell</span>
-                            <span class="author-title">Business Owner</span>
+                            <h4>Sarah Mitchell</h4>
+                            <span>Purchased Tesla Model Y</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card reveal-up">
                     <div class="testimonial-stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -742,12 +599,16 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <p class="testimonial-text">"As a dealer, CarRepo has helped me reach more customers than ever before. The platform is intuitive, and the secure transaction system builds trust with buyers."</p>
+                    <p class="testimonial-text">
+                        "As a first-time buyer, I was nervous about the process. AutoVault made everything 
+                        straightforward. The vehicle history reports gave me confidence in my purchase. 
+                        Highly recommend!"
+                    </p>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Michael Chen" class="author-avatar" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="James Rodriguez" loading="lazy">
                         <div class="author-info">
-                            <span class="author-name">Michael Chen</span>
-                            <span class="author-title">Verified Dealer</span>
+                            <h4>James Rodriguez</h4>
+                            <span>Purchased Honda Accord</span>
                         </div>
                     </div>
                 </div>
@@ -755,100 +616,170 @@
         </div>
     </section>
 
-    <!-- ==================== CALL TO ACTION ==================== -->
-    <section class="cta-section" id="cta">
-        <div class="cta-bg-gradient"></div>
-        <div class="cta-glow cta-glow-1"></div>
-        <div class="cta-glow cta-glow-2"></div>
-        <div class="section-container">
-            <div class="cta-content reveal">
-                <h2 class="cta-title">Ready to Find Your <span class="gradient-text">Dream Car</span>?</h2>
-                <p class="cta-subtitle">Join thousands of satisfied customers who found their perfect vehicle on CarRepo. Start your journey today.</p>
-                <div class="cta-buttons">
-                    <a href="#featured" class="btn btn-primary btn-lg">
-                        <i class="fas fa-car"></i>
-                        Get Started
-                    </a>
-                    <a href="#" class="btn btn-glass btn-lg">
-                        <i class="fas fa-phone-alt"></i>
-                        Contact Sales
-                    </a>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header center reveal-up">
+                <span class="section-label">Contact Us</span>
+                <h2 class="section-title">Get In <span class="accent-text">Touch</span></h2>
+                <p class="section-subtitle">Have questions? We're here to help you find your perfect car</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Visit Us</h4>
+                            <p>123 Auto Boulevard<br>Los Angeles, CA 90001</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+18001234567">1-800-123-4567</a></p>
+                            <p><a href="tel:+18009876543">1-800-987-6543</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:info@autovault.com">info@autovault.com</a></p>
+                            <p><a href="mailto:sales@autovault.com">sales@autovault.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Business Hours</h4>
+                            <p>Mon - Sat: 9:00 AM - 8:00 PM</p>
+                            <p>Sunday: 10:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal-right">
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <h3>Send Us a Message</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Full Name *</label>
+                                <input type="text" id="contactName" name="name" placeholder="John Doe" required>
+                                <span class="form-error" id="contactNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email *</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required>
+                                <span class="form-error" id="contactEmailError"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Phone</label>
+                            <input type="tel" id="contactPhone" name="phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <select id="contactSubject" name="subject">
+                                <option value="general">General Inquiry</option>
+                                <option value="sales">Vehicle Sales</option>
+                                <option value="financing">Financing Questions</option>
+                                <option value="trade">Trade-In</option>
+                                <option value="support">Customer Support</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="message" rows="4" placeholder="Tell us how we can help..." required></textarea>
+                            <span class="form-error" id="contactMessageError"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="map-wrapper reveal-up">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Google Maps Integration</p>
+                    <span>123 Auto Boulevard, Los Angeles, CA 90001</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="footer" id="contact">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- Brand Column -->
-                <div class="footer-brand">
-                    <a href="#" class="footer-logo">
-                        <i class="fas fa-car"></i>
-                        <span>CarRepo</span>
-                    </a>
-                    <p class="footer-desc">Your trusted marketplace for quality used cars. We connect buyers with verified sellers to make car buying simple, safe, and satisfying.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#home" class="footer-logo">
+                            <i class="fas fa-car"></i>
+                            <span>AutoVault</span>
+                        </a>
+                        <p>Your trusted marketplace for premium vehicles. We connect buyers with verified dealers for a transparent, secure car buying experience.</p>
+                        <div class="footer-socials">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#featured">Inventory</a></li>
+                            <li><a href="#categories">Categories</a></li>
+                            <li><a href="#financing">Financing</a></li>
+                            <li><a href="#testimonials">Reviews</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Buy a Car</a></li>
+                            <li><a href="#">Sell Your Car</a></li>
+                            <li><a href="#">Trade-In</a></li>
+                            <li><a href="#">Financing</a></li>
+                            <li><a href="#">Vehicle History</a></li>
+                            <li><a href="#">Insurance</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe for the latest deals and automotive news.</p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
-
-                <!-- Quick Links -->
-                <div class="footer-column">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#featured">Browse Cars</a></li>
-                        <li><a href="#categories">Categories</a></li>
-                        <li><a href="#why-choose">About Us</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                    </ul>
-                </div>
-
-                <!-- Services -->
-                <div class="footer-column">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Buy a Car</a></li>
-                        <li><a href="#">Sell Your Car</a></li>
-                        <li><a href="#">Car Financing</a></li>
-                        <li><a href="#">Vehicle Inspection</a></li>
-                        <li><a href="#">Car Insurance</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="footer-column">
-                    <h4 class="footer-title">Contact Us</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Auto Drive, Suite 400<br>San Francisco, CA 94102</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone-alt"></i>
-                            <span>+1 (800) 555-CARS</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>support@carrepo.com</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
-                        </li>
-                    </ul>
-                </div>
             </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p class="footer-copyright">&copy; 2026 CarRepo. All rights reserved.</p>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 AutoVault. All rights reserved.</p>
                 <div class="footer-legal">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -857,6 +788,35 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Car Details Modal -->
+    <div class="modal" id="carModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Success Modal -->
+    <div class="modal" id="contactSuccessModal">
+        <div class="modal-content modal-small">
+            <div class="modal-icon success">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. Our team will get back to you within 24 hours.</p>
+            <button class="btn btn-primary btn-block" id="contactModalClose">Got it!</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
