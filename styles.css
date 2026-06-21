@@ -2,7 +2,11 @@
    AutoVault - Premium Car Marketplace
    Complete Stylesheet
    ============================================ */
-
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
 /* CSS Variables */
 :root {
     --color-bg: #0f1115;
@@ -629,7 +633,7 @@ input, select, textarea { font-family: inherit; }
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 24px;
 }
 
